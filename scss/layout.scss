@@ -1,0 +1,93 @@
+// layout 공통
+$headerHeight: 96px;
+$topNavHeight: 56px;
+// $mainFooterHeight:
+// $mainMinHeight: calc(100vh - (#{} + #{}));
+
+#wrap {
+  width: 100vw;
+  #header {
+    width: 100%;
+    height: calc($headerHeight + $topNavHeight);
+    margin: 0 auto;
+    padding: 0 10%;
+    box-sizing: border-box;
+    .header-top {
+      position: relative;
+      height: $headerHeight;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: orange;
+      .h-left {
+        width: 40%;
+        height: 100%;
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          span {
+            margin-left: 5%;
+            color: $fontColorGray;
+            font-size: $fontSizeTiny;
+            font-weight: 700;
+          }
+        }
+      }
+      h1 {
+        width: 20%;
+        a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .h-right {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .search-box {
+          margin-right: 2%;
+          input {
+            padding: 12px 15px;
+            box-sizing: border-box;
+            border: 1px solid $gbtnColorGray1;
+            border-radius: 20px;
+          }
+        }
+        .zoom-box {
+          height: 100%;
+          margin-right: 2%;
+          overflow: hidden;
+          li {
+            height: 100%;
+            float: left;
+            a {
+              display: inline-block;
+              width: 28px;
+              height: 38px;
+              border: none;
+              background-image: url('../img/header/zoom-icon.png');
+              background-repeat: no-repeat;
+            }
+            &:nth-child(1) a {
+              background-position: -3px 3px;
+            }
+            &:nth-child(2) a {
+              background-position: -28px 3px;
+            }
+            &:nth-child(3) a {
+              background-position: -57px 3px;
+            }
+          }
+        }
+        .lang-box {
+          margin-right: 4%;
+        }
+      }
+    }
+  }
+}
