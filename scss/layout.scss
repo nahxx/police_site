@@ -175,8 +175,11 @@ $topNavHeight: 56px;
           &:nth-child(3) .gnb2 {
             min-width: 280px;
           }
-          &:nth-child(6) .gnb2 {
+          &:nth-child(4) .gnb2 {
             min-width: 210px;
+          }
+          &:nth-child(6) .gnb2 {
+            min-width: 220px;
           }
           & > a {
             font-size: $fontSizeMid;
@@ -277,6 +280,7 @@ $topNavHeight: 56px;
         justify-content: space-between;
         align-items: center;
         .select {
+          position: relative;
           button {
             position: relative;
             width: 250px;
@@ -289,6 +293,7 @@ $topNavHeight: 56px;
             color: $fontColorGray;
             text-align: left;
             font-size: $fontSizeNormal;
+            cursor: pointer;
             &:after {
               position: absolute;
               top: 18px;
@@ -296,6 +301,60 @@ $topNavHeight: 56px;
               display: inline-block;
               content: '▼';
               font-size: $fontSizeTiny;
+              font-weight: 600;
+            }
+          }
+          ul {
+            position: absolute;
+            bottom: 100%;
+            margin-bottom: 5px;
+            display: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 600px;
+            background: $layoutBg;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            &.open {
+              display: flex;
+            }
+            li {
+              position: relative;
+              flex: calc(50% - 1px);
+              height: 40px;
+              padding: 0 10px;
+              box-sizing: border-box;
+              border-bottom: 1px solid #ccc;
+              border-right: 1px solid #ccc;
+              &:nth-child(2n+2) {
+                border-right: none;
+              }
+              &:nth-child(17), &:nth-child(18) {
+                border-bottom: none;
+              }
+              &:after {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: inline-block;
+                content: '▶';
+                font-size: 10px;
+                color: #999;
+                font-weight: 600;
+              }
+              a {
+                font-size: $fontSizeSmall;
+                font-weight: 600;
+                line-height: 40px;
+              }
+            }
+          }
+          &:nth-child(3) ul, &:nth-child(4) ul {
+            flex-wrap: nowrap;
+            flex-flow: column;
+            width: 300px;
+            li {
+              display: block;
             }
           }
         }
