@@ -8,7 +8,7 @@ $topNavHeight: 56px;
   width: 100vw;
   #header {
     width: 100%;
-    height: calc($headerHeight + $topNavHeight);
+    height: $headerHeight + $topNavHeight;
     margin: 0 auto;
     padding: 0 20%;
     box-sizing: border-box;
@@ -138,11 +138,13 @@ $topNavHeight: 56px;
     }
     .top-nav {
       .open_menu {
+        display: inline-block;
         width: 40px;
         height: 40px;
         border: none;
         border-radius: 5px;
         background: $gbtnColorGray1;
+        float: left;
         span {
           // position: relative;
           display: block;
@@ -159,7 +161,6 @@ $topNavHeight: 56px;
           }
         }
       }
-<<<<<<< HEAD
       ul.gnb1 {
         display: inline-block;
         float: left;
@@ -299,8 +300,6 @@ $topNavHeight: 56px;
           }
         }
       }
-=======
->>>>>>> parent of 0ddab64 (메인 상단바, 푸터 구현)
     }
   }
 }
