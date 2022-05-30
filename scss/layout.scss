@@ -8,10 +8,10 @@ $topNavHeight: 56px;
   width: 100vw;
   #header {
     width: 100%;
-    height: calc($headerHeight + $topNavHeight);
-    margin: 0 auto;
     padding: 0 20%;
     box-sizing: border-box;
+    height: $headerHeight + $topNavHeight;
+    margin: 0 auto;
     .header-top {
       position: relative;
       height: $headerHeight;
@@ -138,11 +138,13 @@ $topNavHeight: 56px;
     }
     .top-nav {
       .open_menu {
+        display: inline-block;
         width: 40px;
         height: 40px;
         border: none;
         border-radius: 5px;
         background: $gbtnColorGray1;
+        float: left;
         span {
           // position: relative;
           display: block;
@@ -156,6 +158,145 @@ $topNavHeight: 56px;
           }
           &:last-child {
             margin-top: 5px;
+          }
+        }
+      }
+      ul.gnb1 {
+        display: inline-block;
+        float: left;
+        margin: 0 85px;
+        & > li {
+          position: relative;
+          float: left;
+          margin: 0 40px;
+          &:nth-child(2) .gnb2 {
+            min-width: 180px;
+          }
+          &:nth-child(3) .gnb2 {
+            min-width: 280px;
+          }
+          &:nth-child(6) .gnb2 {
+            min-width: 210px;
+          }
+          & > a {
+            font-size: $fontSizeMid;
+            font-weight: 500;
+            line-height: 40px;
+          }
+          &:before {
+            position: absolute;
+            top: 15px;
+            left: -41px;
+            content: '';
+            width: 1px;
+            height: 12px;
+            background: $fontColorBasic;
+          }
+          &:first-child:before {
+            display: none;
+          }
+          .gnb2 {
+            display: inline-block;
+            position: absolute;
+            top: calc(100% - 3px);
+            left: -38px;
+            padding: 3px 8px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, .05);
+            opacity: 0;
+            background: $layoutBg;
+            z-index: 500;
+            transition: .3s;
+            &.open {
+              top: 100%;
+              opacity: 1;
+            }
+            & > li {
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 5px 0;
+              box-sizing: border-box;
+              & > a {
+                display: block;
+                min-width: 170px;
+                padding: 4px 0;
+                padding-left: 8px;
+                box-sizing: border-box;
+                font-size: $fontSizeNormal;
+                font-weight: 600;
+                color: $fontColorGray;
+                &:hover {
+                  background: $GrayBg;
+                  color: $fontColorPrimary;
+                  text-decoration-line: underline;
+                }
+              }
+              .gnb3 {
+                padding: 5px 0;
+                box-sizing: border-box;
+                li {
+                  width: 100%;
+                  height: 100%;
+                  a {
+                    position: relative;
+                    padding-left: 25px;
+                    color: $fontColorGray;
+                    font-size: $fontSizeSmall;
+                    font-weight: 600;
+                    &:hover {
+                      color: $fontColorPrimary;
+                      text-decoration-line: underline;
+                    }
+                    &:before {
+                      position: absolute;
+                      left: 15px;
+                      content: '-';
+                      display: inline-block;
+                      color: $fontColorGray;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #footer {
+    width: 100vw;
+    margin-top: 100px;
+    background: $mainfooterBg;
+    .container {
+      padding: 0 20%;
+      padding-top: 50px;
+      box-sizing: border-box;
+      .footer01 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .select {
+          button {
+            position: relative;
+            width: 250px;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #c2c2c2;
+            padding: 0 10px;
+            box-sizing: border-box;
+            background: $layoutBg;
+            color: $fontColorGray;
+            text-align: left;
+            font-size: $fontSizeNormal;
+            &:after {
+              position: absolute;
+              top: 18px;
+              right: 10px;
+              display: inline-block;
+              content: '▼';
+              font-size: $fontSizeTiny;
+            }
           }
         }
       }
