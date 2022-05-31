@@ -10,7 +10,7 @@ $topNavHeight: 56px;
     width: 100%;
     height: $headerHeight + $topNavHeight;
     margin: 0 auto;
-    padding: 0 20%;
+    padding: 0 370px;
     box-sizing: border-box;
     .header-top {
       position: relative;
@@ -207,12 +207,14 @@ $topNavHeight: 56px;
             box-sizing: border-box;
             border: 1px solid rgba(0, 0, 0, .05);
             opacity: 0;
+            visibility: hidden;
             background: $layoutBg;
             z-index: 500;
             transition: .3s;
             &.open {
               top: 100%;
               opacity: 1;
+              visibility: visible;
             }
             & > li {
               display: block;
@@ -272,7 +274,7 @@ $topNavHeight: 56px;
     margin-top: 100px;
     background: $mainfooterBg;
     .container {
-      padding: 50px 20%;
+      padding: 50px 370px;
       box-sizing: border-box;
       .footer01 {
         position: relative;
@@ -453,6 +455,9 @@ $topNavHeight: 56px;
                 padding-left: 10px;
                 padding-right: 35px;
                 background: #e3e8f0;
+                &:hover {
+                  color: $fontColorBasic;
+                }
                 &:after {
                   position: absolute;
                   top: 1px;

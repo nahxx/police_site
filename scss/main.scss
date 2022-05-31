@@ -1,7 +1,8 @@
 #main {
   margin-top: 20px;
+  height: 100%;
   min-height: 80%;
-  padding: 0 20%;
+  padding: 0 370px;
   box-sizing: border-box;
   .mainbanner {
     width: 100%;
@@ -22,6 +23,99 @@
       font-weight: 600;
       font-size: $titleFontSizeBig;
       line-height: 50px;
+    }
+  }
+  .favorite-link {
+    margin-top: 50px;
+    .tab-box {
+      position: relative;
+      width: 330px;
+      height: 45px;
+      margin: 0 auto;
+      border: 3px solid $fontColorNavy;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        position: absolute;
+        display: inline-block;
+        width: 162px;
+        height: 45px;
+        border-radius: 50px;
+        a {
+          display: block;
+          line-height: 45px;
+          text-align: center;
+          color: $fontColorNavy;
+          font-size: $fontSizeMid;
+        }
+        &.active {
+          background: $fontColorNavy;
+          a {
+            color: #fff;
+          }
+        }
+      }
+      .service-tab {
+        left: -3px;
+      }
+      .report-tab {
+        right: -3px;
+      }
+    }
+    .list-box {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      height: 186px;
+      margin: 40px 0;
+      & > li {
+        position: absolute;
+        width: 50000px;
+        display: none;
+        &.active {
+          display: block;
+        }
+        ul {
+          overflow: hidden;
+          li {
+            float: left;
+            margin-right: 40px;
+            &:first-child {
+              padding-left: 10px;
+              box-sizing: border-box;
+            }
+            a {
+              width: 100%;
+              height: 100%;
+              &:hover {
+                color: $fontColorBasic;
+                img {
+                  background: $fontcolorHover;
+                  box-shadow: 0px 7px 14px 0px rgba(0, 41, 70, .22);
+                }
+                span {
+                  color: $fontColorNavy;
+                  text-decoration: underline;
+                }
+              }
+              img {
+                display: block;
+                background: $mainfooterBg;
+                border-radius: 40px;
+              }
+              span {
+                display: block;
+                width: 110px;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

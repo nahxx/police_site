@@ -19,4 +19,9 @@
        <li>메인 푸터 구현</li>
      </ol>
    </li>
+   <li>22/05/31
+     <ol>
+       <li>메인 favorite-link 클래스 구현</li>
+     </ol>
+   </li>
  </ul>
