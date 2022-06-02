@@ -24,4 +24,9 @@
        <li>메인 favorite-link 클래스 구현</li>
      </ol>
    </li>
+   <li>22/06/02
+     <ol>
+       <li>메인 flex-box 클래스 구현</li>
+     </ol>
+   </li>
  </ul>
