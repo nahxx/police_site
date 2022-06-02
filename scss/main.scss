@@ -2,8 +2,28 @@
   margin-top: 20px;
   height: 100%;
   min-height: 80%;
-  padding: 0 370px;
   box-sizing: border-box;
+  .area {
+    padding: 0 370px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    background: url('../img/main/icon/arrow.png') no-repeat;
+    transform:translateY(-50%);
+    &:after {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    left: -50px;
+    background-position: -5px center;
+  }
+  .swiper-button-next {
+    right: -50px;
+    background-position: -55px center;
+  }
   .mainbanner {
     width: 100%;
     height: 500px;
@@ -65,51 +85,58 @@
       }
     }
     .list-box {
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
       display: block;
       height: 186px;
       margin: 40px 0;
       & > li {
-        position: absolute;
-        width: 50000px;
         display: none;
         &.active {
           display: block;
         }
-        ul {
-          li {
-            float: left;
-            margin-right: 40px;
-            &:first-child {
-              padding-left: 10px;
-              box-sizing: border-box;
-            }
-            a {
-              width: 100%;
-              height: 100%;
-              &:hover {
-                color: $fontColorBasic;
+        .li-box {
+          position: absolute;
+          width: 100%;
+          padding-left: 30px;
+          box-sizing: border-box;
+          overflow: hidden;
+          ul {
+            display: inline-block;
+            width: 2000px;
+            li {
+              float: left;
+              // margin-right: 40px;
+              &:first-child {
+                margin-left: 0 10px;
+                box-sizing: border-box;
+              }
+              a {
+                width: 100%;
+                height: 100%;
+                &:hover {
+                  color: $fontColorBasic;
+                  img {
+                    background: $fontcolorHover;
+                    box-shadow: 0px 7px 14px 0px rgba(0, 41, 70, .22);
+                  }
+                  span {
+                    color: $fontColorNavy;
+                    text-decoration: underline;
+                  }
+                }
                 img {
-                  background: $fontcolorHover;
-                  box-shadow: 0px 7px 14px 0px rgba(0, 41, 70, .22);
+                  display: block;
+                  background: $mainfooterBg;
+                  border-radius: 40px;
                 }
                 span {
-                  color: $fontColorNavy;
-                  text-decoration: underline;
+                  display: block;
+                  width: 110px;
+                  margin-top: 10px;
+                  text-align: center;
+                  font-size: 15px;
                 }
-              }
-              img {
-                display: block;
-                background: $mainfooterBg;
-                border-radius: 40px;
-              }
-              span {
-                display: block;
-                width: 110px;
-                margin-top: 10px;
-                text-align: center;
-                font-size: 15px;
               }
             }
           }
@@ -387,6 +414,75 @@
           span {
             color: $fontColorBasic;
             font-size: $fontSizeMid;
+          }
+        }
+      }
+    }
+  }
+  .board-wrap {
+    min-height: 440px;
+    margin: 100px 0;
+    background: url('../img/main/slide/bg_banner.png') no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    .inner {
+      position: relative;
+      padding: 60px 20px;
+      .swiper-btn {
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        background: url('../img/main/icon/arrow2.png') no-repeat;
+        transform:translateY(-50%);
+        &:after {
+          display: none;
+        }
+        &[aria-disabled=true] {
+          opacity: .3;
+        }
+      }
+      .swiper-button-prev2 {
+        left: -50px;
+        background-position: -5px center;
+      }
+      .swiper-button-next2 {
+        right: -50px;
+        background-position: -55px center;
+      }
+      .board-box {
+        .banner-list {
+          .banner-li {
+            background: $layoutBg;
+            border-radius: 15px;
+            a {
+              display: block;
+              padding: 11px 11px 27px 11px;
+              img {
+                display: block;
+                width: 100%;
+                height: 165px;
+                border-radius: 8px;
+              }
+              .txt-box {
+                padding: 18px 10px 0;
+                strong {
+                  display: block;
+                  margin-bottom: 10px;
+                  font-size: $fontSizeMid;
+                  font-weight: 500;
+                }
+                span {
+                  display: block;
+                  height: 48px;
+                  line-height: 1.6;
+                  color: $fontColorGray;
+                  font-size: $fontSizeNormal;
+                  overflow: hidden;
+                  word-wrap: break-word;
+                }
+              }
+            }
           }
         }
       }

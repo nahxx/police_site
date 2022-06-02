@@ -58,4 +58,24 @@ $(function() {
    });
    return false
  });
+
+ //
+ $('.banner-li .txt-box strong').each(function() {
+   let elem = $(this);
+   let content = elem.text();
+   const showTextLeng = 14;
+   let lessText = content.substr(0, showTextLeng);
+   if(content.length > showTextLeng) {
+     elem.text(`${lessText}…`);
+   }
+ });
+ $('.banner-li .txt-box span').each(function() {
+   let elem = $(this);
+   let content = elem.text();
+   const showTextLeng = 34;
+   let lessText = content.substr(0, showTextLeng);
+   if(content.length > showTextLeng) {
+     elem.text(`${lessText}…`);
+   }
+ });
 });
