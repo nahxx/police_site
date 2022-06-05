@@ -10,8 +10,10 @@ $topNavHeight: 56px;
     width: 100%;
     height: $headerHeight + $topNavHeight;
     margin: 0 auto;
-    padding: 0 370px;
     box-sizing: border-box;
+    .area {
+      padding: 0 370px;
+    }
     .header-top {
       position: relative;
       height: $headerHeight;
@@ -137,128 +139,295 @@ $topNavHeight: 56px;
       }
     }
     .top-nav {
-      .open_menu {
+      .nav-box {
         display: inline-block;
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 5px;
-        background: $gbtnColorGray1;
-        float: left;
-        span {
-          // position: relative;
-          display: block;
-          width: 20px;
-          height: 2px;
-          margin: 0 auto;
-          background: #000;
-          &:first-child {
-            // position: absolute;
-            margin-bottom: 5px;
-          }
-          &:last-child {
-            margin-top: 5px;
+        .open_menu {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          border: none;
+          border-radius: 5px;
+          background: $gbtnColorGray1;
+          float: left;
+          span {
+            // position: relative;
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 0 auto;
+            background: #000;
+            &:first-child {
+              // position: absolute;
+              margin-bottom: 5px;
+            }
+            &:last-child {
+              margin-top: 5px;
+            }
           }
         }
-      }
-      ul.gnb1 {
-        display: inline-block;
-        float: left;
-        margin: 0 85px;
-        & > li {
-          position: relative;
+        ul.gnb1 {
+          display: inline-block;
           float: left;
-          margin: 0 40px;
-          &:nth-child(2) .gnb2 {
-            min-width: 180px;
-          }
-          &:nth-child(3) .gnb2 {
-            min-width: 280px;
-          }
-          &:nth-child(4) .gnb2 {
-            min-width: 210px;
-          }
-          &:nth-child(6) .gnb2 {
-            min-width: 220px;
-          }
-          & > a {
-            font-size: $fontSizeMid;
-            font-weight: 500;
-            line-height: 40px;
-          }
-          &:before {
-            position: absolute;
-            top: 15px;
-            left: -41px;
-            content: '';
-            width: 1px;
-            height: 12px;
-            background: $fontColorBasic;
-          }
-          &:first-child:before {
-            display: none;
-          }
-          .gnb2 {
-            display: inline-block;
-            position: absolute;
-            top: calc(100% - 3px);
-            left: -38px;
-            padding: 3px 8px;
-            box-sizing: border-box;
-            border: 1px solid rgba(0, 0, 0, .05);
-            opacity: 0;
-            visibility: hidden;
-            background: $layoutBg;
-            z-index: 500;
-            transition: .3s;
-            &.open {
-              top: 100%;
-              opacity: 1;
-              visibility: visible;
+          margin: 0 85px;
+          & > li {
+            position: relative;
+            float: left;
+            margin: 0 40px;
+            &:nth-child(2) .gnb2 {
+              min-width: 180px;
             }
-            & > li {
-              display: block;
-              width: 100%;
-              height: 100%;
-              padding: 5px 0;
+            &:nth-child(3) .gnb2 {
+              min-width: 280px;
+            }
+            &:nth-child(4) .gnb2 {
+              min-width: 210px;
+            }
+            &:nth-child(6) .gnb2 {
+              min-width: 220px;
+            }
+            & > a {
+              font-size: $fontSizeMid;
+              font-weight: 500;
+              line-height: 40px;
+            }
+            &:before {
+              position: absolute;
+              top: 15px;
+              left: -41px;
+              content: '';
+              width: 1px;
+              height: 12px;
+              background: $fontColorBasic;
+            }
+            &:first-child:before {
+              display: none;
+            }
+            .gnb2 {
+              display: inline-block;
+              position: absolute;
+              top: calc(100% - 3px);
+              left: -38px;
+              padding: 3px 8px;
               box-sizing: border-box;
-              & > a {
-                display: block;
-                min-width: 170px;
-                padding: 4px 0;
-                padding-left: 8px;
-                box-sizing: border-box;
-                font-size: $fontSizeNormal;
-                font-weight: 600;
-                color: $fontColorGray;
-                &:hover {
-                  background: $GrayBg;
-                  color: $fontColorPrimary;
-                  text-decoration-line: underline;
-                }
+              border: 1px solid rgba(0, 0, 0, .05);
+              opacity: 0;
+              visibility: hidden;
+              background: $layoutBg;
+              z-index: 500;
+              transition: .3s;
+              &.open {
+                top: 100%;
+                opacity: 1;
+                visibility: visible;
               }
-              .gnb3 {
+              & > li {
+                display: block;
+                width: 100%;
+                height: 100%;
                 padding: 5px 0;
                 box-sizing: border-box;
-                li {
-                  width: 100%;
-                  height: 100%;
-                  a {
-                    position: relative;
-                    padding-left: 25px;
-                    color: $fontColorGray;
-                    font-size: $fontSizeSmall;
-                    font-weight: 600;
-                    &:hover {
-                      color: $fontColorPrimary;
-                      text-decoration-line: underline;
-                    }
-                    &:before {
-                      position: absolute;
-                      left: 15px;
-                      content: '-';
-                      display: inline-block;
+                & > a {
+                  display: block;
+                  min-width: 170px;
+                  padding: 4px 0;
+                  padding-left: 8px;
+                  box-sizing: border-box;
+                  font-size: $fontSizeNormal;
+                  font-weight: 600;
+                  color: $fontColorGray;
+                  &:hover {
+                    background: $GrayBg;
+                    color: $fontColorPrimary;
+                    text-decoration-line: underline;
+                  }
+                }
+                .gnb3 {
+                  padding: 5px 0;
+                  box-sizing: border-box;
+                  li {
+                    width: 100%;
+                    height: 100%;
+                    a {
+                      position: relative;
+                      padding-left: 25px;
                       color: $fontColorGray;
+                      font-size: $fontSizeSmall;
+                      font-weight: 600;
+                      &:hover {
+                        color: $fontColorPrimary;
+                        text-decoration-line: underline;
+                      }
+                      &:before {
+                        position: absolute;
+                        left: 15px;
+                        content: '-';
+                        display: inline-block;
+                        color: $fontColorGray;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .main-menu {
+          display: none;
+        }
+      }
+      &.in {
+        margin-top: -8px;
+        height: 56px;
+        background: $navBg;
+        .nav-box {
+          position: relative;
+          padding: 0 0;
+          .open_menu {
+            margin-top: 8px;
+            margin-left: 370px;
+            position: relative;
+            span {
+              position: absolute;
+              left: 10px;
+              &:first-child {
+                transform: rotate(-45deg);
+                margin-bottom: 0;
+              }
+              &:nth-child(2) {
+                transform: rotate(45deg);
+              }
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+          .gnb1 {
+            display: none;
+          }
+          .main-menu {
+            position: absolute;
+            top: 56px;
+            display: block;
+            width: 100vw;
+            max-height: inherit;
+            background: #eeeff3;
+            z-index: 500;
+            &:before {
+              content: '경찰청 전체메뉴';
+              position: absolute;
+              top: -56px;
+              right: 0;
+              display: inline-block;
+              width: calc(50% + 528px);
+              font-size: $fontSizeMid;
+              color: $layoutBg;
+              text-align: left;
+              height: 56px;
+              line-height: 56px;
+            }
+            .main-bg {
+              position: relative;
+              display: block;
+              width: calc(50% - 387px);
+              height: 400px;
+              background: url('../img/header/menu_bg.png') no-repeat;
+              background-position: right 170px;
+            }
+            .gnb1 {
+              position: relative;
+              float: right;
+              display: inline-block;
+              width: calc(50% + 337px);
+              margin: 0 0;
+              padding: 24px 20px;
+              padding-right: 0;
+              background: $layoutBg;
+              & > li {
+                float: none;
+                display: table;
+                table-layout: fixed;
+                margin: 0 0;
+                overflow: hidden;
+                &+li {
+                  margin-top: 9px;
+                }
+                &:before {
+                  display: none;
+                }
+                & > a {
+                  display: table-cell;
+                  width: 154px;
+                  padding: 12px 13px;
+                  border: 1px solid #d0d0d0;
+                  font-weight: 500;
+                  font-size: 15px;
+                  line-height: 15px;
+                  color: $gbtnColorBlue2;
+                  text-align: left;
+                  vertical-align: top;
+                }
+                ul.gnb2 {
+                  position: static;
+                  visibility: visible;
+                  display: table-cell;
+                  width: 807px;
+                  padding: 0;
+                  margin-left: 6px;
+                  border: 1px solid #d0d0d0;
+                  vertical-align: top;
+                  box-shadow: none;
+                  opacity: 1;
+                  & > li {
+                    display: table;
+                    width: 100%;
+                    padding: 0 0;
+                    padding-top: 1px;
+                    background: url('../img/header/dot_line.png') repeat-x;
+                    background-position: 0 0;
+                    overflow: hidden;
+                    &:first-child {
+                      padding-top: 0;
+                      background: none;
+                    }
+                    & > a {
+                      display: table-cell;
+                      width: 152px;
+                      height: 37px;
+                      padding: 9px 11px;
+                      background-color: #fafafa;
+                      font-weight: 500;
+                      vertical-align: top;
+                    }
+                    ul.gnb3 {
+                      display: table-cell;
+                      padding: 4px 0 2px 0;
+                      & > li {
+                        position: relative;
+                        width: auto;
+                        height: auto;
+                        display: inline-block;
+                        float: left;
+                        &:last-child {
+                          &:after {
+                            display: none;
+                          }
+                        }
+                        &:after {
+                          position: absolute;
+                          top: calc(50% - 4px);
+                          right: 0px;
+                          content: '';
+                          display: inline-block;
+                          width: 1px;
+                          height: 10px;
+                          background: $gbtnColorGray1;
+                        }
+                        a {
+                          display: inline-block;
+                          padding: 5px 10px;
+                          font-weight: 500;
+                        }
+                      }
                     }
                   }
                 }
