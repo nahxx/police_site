@@ -40,6 +40,7 @@
    <li>22/06/06
      <ol>
        <li>service-list 클래스 list 사이 마진값 추가</li>
+       <li>board-items 클래스 a의 border-bottom 수정</li>
      </ol>
    </li>
  </ul>
