@@ -37,4 +37,9 @@
        <li>전체메뉴 구현</li>
      </ol>
    </li>
+   <li>22/06/06
+     <ol>
+       <li>service-list 클래스 list 사이 마진값 추가</li>
+     </ol>
+   </li>
  </ul>
